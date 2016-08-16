@@ -1,0 +1,18 @@
+SMAP
+enviarRecetaPorEmail_jsp.java
+JSP
+*S JSP
+*F
++ 0 enviarRecetaPorEmail.jsp
+jsp/enviarRecetaPorEmail.jsp
+*L
+1,19:46
+20,6:65,3
+26,2:83
+28,10:86
+37,4:96
+41,3:101
+43:104
+44:105,3
+45,29:108
+*E

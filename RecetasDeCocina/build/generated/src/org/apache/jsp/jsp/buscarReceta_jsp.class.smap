@@ -1,0 +1,16 @@
+SMAP
+buscarReceta_jsp.java
+JSP
+*S JSP
+*F
++ 0 buscarReceta.jsp
+jsp/buscarReceta.jsp
+*L
+1,19:46
+20,6:65,3
+26,2:83
+28,10:86
+37,4:96
+41:100,3
+42,35:103
+*E

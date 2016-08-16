@@ -1,0 +1,23 @@
+SMAP
+comoMostrarReceta_jsp.java
+JSP
+*S JSP
+*F
++ 0 comoMostrarReceta.jsp
+jsp/comoMostrarReceta.jsp
+*L
+1,11:48
+11,14:59
+25,6:73,3
+31,2:91
+33,10:94
+42,2:104
+44:106,3
+45,7:109
+51,4:116
+54,6:120
+60:126,3
+61,5:129
+66,2:135
+67,12:137
+*E

@@ -1,0 +1,16 @@
+SMAP
+mostrarPorCategoria_jsp.java
+JSP
+*S JSP
+*F
++ 0 mostrarPorCategoria.jsp
+jsp/mostrarPorCategoria.jsp
+*L
+1,20:46
+21,6:66,3
+27,2:84
+29,10:87
+38,5:97
+43:102,3
+44,34:105
+*E

@@ -1,0 +1,107 @@
+Introducción
+-------------
+Abrimos un terminal y nos dirigimos con cd a donde tengamos 
+la base de datos
+
+
+
+Para cargar la base de datos: sqlite3 recetario.sqlite
+con esto ya podemos trabajar en la base de datos recetario.
+
+Si queremos volcar el contenido de un base de datos a un fichero, 
+usamos el comando .dump. Ejemplo:
+C:\Users\joako\Desktop>sqlite3 recetario.sqlite .dump > kk.txt
+
+Si queremos hacer el paso contrario, es decir a partir de un fichero
+crear una base de datos hacemos:
+C:\Users\joako\Desktop>sqlite3 nueva.sqlite <kk.txt
+
+------------------------------
+
+Microsoft Windows [Versión 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\Users\joako>cd Desktop
+
+C:\Users\joako\Desktop>dir *sqlite
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 549E-5EE2
+
+ Directorio de C:\Users\joako\Desktop
+
+15/12/2010  00:11             3.072 recetario.sqlite
+               1 archivos          3.072 bytes
+               0 dirs   7.891.337.216 bytes libres
+
+C:\Users\joako\Desktop>sqlite recetario.sqlite
+"sqlite" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\joako\Desktop>sqlite3
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .q
+
+C:\Users\joako\Desktop>sqlite3 Receta
+Error: unable to open database "Receta": unable to open database file
+
+C:\Users\joako\Desktop>sqlite3 recetario.sqlite
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .sch
+CREATE TABLE receta
+(
+        comidas VARCHAR(80) not null primary key
+);
+sqlite> .dump
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE receta
+(
+        comidas VARCHAR(80) not null primary key
+);
+COMMIT;
+sqlite> insert into receta ( comidas ) values ( 'hola' );
+sqlite> insert into receta ( comidas ) values ( 'hola' );
+Error: column comidas is not unique
+sqlite> insert into receta ( comidas ) values ( 'holafeo' );
+sqlite> select * from comidas;
+Error: no such table: comidas
+sqlite> select * from receta;
+hola
+holafeo
+sqlite> .dump
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE receta
+(
+        comidas VARCHAR(80) not null primary key
+);
+INSERT INTO "receta" VALUES('hola');
+INSERT INTO "receta" VALUES('holafeo');
+COMMIT;
+sqlite> .q
+
+C:\Users\joako\Desktop>sqlite3 recetario.sqlite .dump > kk.txt
+
+C:\Users\joako\Desktop>sqlite3 nueva.sqlite <kk.txt
+
+C:\Users\joako\Desktop>sqlite3 nueva.sqlite
+SQLite version 3.7.4
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .dump
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE receta
+(
+        comidas VARCHAR(80) not null primary key
+);
+INSERT INTO "receta" VALUES('hola');
+INSERT INTO "receta" VALUES('holafeo');
+COMMIT;
+sqlite> .q
+
+C:\Users\joako\Desktop>
